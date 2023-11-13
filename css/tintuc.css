@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 0.8vw;
+}
+.tintuc {
+  width: 1440px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px; 
+  justify-content: space-between;
+    background-color: #fff;
+    
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+}
+.tintuc h1 {
+  text-align: center;
+  font-size: 35px;
+  color: #14181c;
+ font-weight: 400;
+}
+.pvt {
+  display: flex;
+
+margin-left: 1000px;
+}
+.pvt .left{
+width: 200px;
+
+}
+.pvt .right{
+ margin-left: 6px;
+width: 200px;
+}
+img{width: 100%;}
+.pvt a.a1{
+text-decoration: none;
+display: block;
+color: black;
+font-size: 16px;
+}
+.pvt a.a2:hover{
+  text-decoration: underline;
+  }
+  .pvt a.a3:hover{
+  text-decoration: underline;
+     }
+.pvt a.a2{
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+.pvt a.a3{
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+}
+.pvt span.minutes{
+  
+}
