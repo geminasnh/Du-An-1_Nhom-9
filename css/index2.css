@@ -212,6 +212,119 @@ object-fit: cover;
 margin-top: 50px;
 text-align: center;
 }
+.content2 h1{
+  font-size: 30px;
+}
+.content2 p{
+  font-size: 20px;
+}
+.new h3 {
+  font-size: 20px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 700px 700px;
+
+}
+.row1 {
+  padding: 20px;
+  position: relative;
+}
+.row1 img {
+  width: 800px;
+  height: 600px;
+}
+.row1 .button1{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 500px;
+  right: 500px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+}
+.row1 .button2{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 500px;
+  right: 500px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+}
+.row1 .button1:hover{
+  background-color: #747E7E;
+}
+.row1 .button2:hover{
+  background-color: #747E7E;
+}
+.roww {
+  display: grid;
+  grid-template-columns: 450px 450px 450px;
+
+}
+.row2 img{
+  width: 400px;
+  height: 500px;
+}
+.roww {
+  position: relative;
+  margin-top: 10px;
+}
+.roww .row2{
+  padding: 10px;
+}
+.row2 button {
+  border-radius: 60px;
+}
+.row2 .button3{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 450px;
+  right: 1230px;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  border: #747E7E;
+}
+.row2 .button4{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 450px;
+  right: 780px;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  border: #747E7E;
+}
+.row2 .button5{
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 450px;
+  right: 330px;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  border: #747E7E;
+}
+.roww .button3:hover{
+  background-color: #747E7E;
+}
+.roww .button4:hover{
+  background-color: #747E7E;
+}
+.roww .button5:hover{
+  background-color: #747E7E;
+}
+.new h3{
+  margin-top: 20px;
+
+}
 .nextt{
 margin-top: 10px;
 
@@ -223,6 +336,10 @@ background-color: black;
 border-color: #111111;
 border-radius: 40px;
 height: 40px;
+font-size: 15px;
+}
+.nextt button:hover{
+  background-color: #747E7E;
 }
 main{
 width: 92%;
