@@ -1,0 +1,121 @@
+@media (min-width: 1200px) and (max-width: 1680px) {
+    .box-2-1-2 {
+        display: none;
+      }
+    
+}
+
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    header{
+        line-height: 36px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #F5F5F2;
+      }
+    .menu1 a {
+        font-size: 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: 300;
+        cursor: pointer;
+      }
+      .box-2 {
+        display: none;
+        
+      }
+      nav .logo2{
+        width: 200px;
+        height: 60px;
+       
+      }
+      .logo2 img{
+        width:200px;  
+        object-fit: cover;
+       
+      }
+
+     
+    .box-2-1{
+        display: block;
+        
+        width: 40px;
+        height: 25px;
+    
+    }
+    .search_bar form input {
+        width: 80px;
+    }
+    .box-2-1 img{
+        padding-left: 1px;
+        object-fit: cover;
+        width: 40px;
+        height: 25px;
+    
+    }
+    .box-2-1 button{
+       background-color: white;
+       border: none;
+    }
+    .thongtin{
+        width: 92%;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+        .khung{
+            background-color: #fff;
+            width: 50%;
+            margin-right: 0px;
+            height: 100%;
+        }
+        .khung button{
+           border: none;
+           background-color: #fff;
+           border-radius: 100%;
+           width: 30px;
+           height: 30px;
+           color: black;
+           font-size: 24px;
+        }
+        .close{
+            margin-right: 20px;
+        }
+        .khung button:hover{
+            
+            background-color: #ccc;
+            
+         }
+        .box-2-1-2 {
+            display: none;
+            position:fixed;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+          
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+}
+          
+          }
+          
+          .box-2-1-2 ul{
+           width: 50%;
+           height: 120px;
+          }
+          .box-2-1-2 ul li{
+            border-bottom: 1px solid black;
+           margin-left: 10px;
+          
+            list-style: none;
+            margin-top: 20px;
+          }
+          .box-2-1-2 ul li a{
+       
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+          }
+}
