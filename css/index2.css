@@ -410,6 +410,7 @@ margin-top: 50px;
 height: 100%;
 background-color: #111111;
 color: white;
+<<<<<<< Updated upstream
 
 }
 .footercon{
@@ -420,10 +421,23 @@ width: 92%;
 justify-content: center;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
+=======
+justify-content: center;
+
+}
+.thongtin{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+justify-content: space-between;
+>>>>>>> Stashed changes
 }
 .thongtin1{
 margin-top: 30px;
+<<<<<<< Updated upstream
 margin-left: auto;
+=======
+margin-left: 50px;
+>>>>>>> Stashed changes
 }
 .thongtin1 h3{
 padding-top: 10px;
@@ -453,10 +467,13 @@ background-color: #747E7E;
 background-color: white;
 }
 .icon2{
+padding-top: 30px;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-gap: 20px;
+height: 30px;
 }
+<<<<<<< Updated upstream
 .box-all {
   display: none;
 
@@ -580,3 +597,10 @@ grid-gap: 20px;
   display: block;
 }
 >>>>>>> c03400496ce6ec91ae067c13852a9dc9fbbe4b50
+=======
+@media (max-width: 767px) {
+nav.box-2{
+  display: none;
+}
+}
+>>>>>>> Stashed changes
