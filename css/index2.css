@@ -5,12 +5,7 @@
 * {
   max-width: 100%;
   margin: 0 auto;
-<<<<<<< HEAD
-
-=======
   box-sizing: border-box;
-  font-size: 0.8vw;
->>>>>>> c03400496ce6ec91ae067c13852a9dc9fbbe4b50
 }
 /* ALL  CSS*/
 .container {
@@ -410,7 +405,6 @@ margin-top: 50px;
 height: 100%;
 background-color: #111111;
 color: white;
-<<<<<<< Updated upstream
 
 }
 .footercon{
@@ -421,7 +415,6 @@ width: 92%;
 justify-content: center;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
-=======
 justify-content: center;
 
 }
@@ -429,15 +422,10 @@ justify-content: center;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 justify-content: space-between;
->>>>>>> Stashed changes
 }
 .thongtin1{
 margin-top: 30px;
-<<<<<<< Updated upstream
 margin-left: auto;
-=======
-margin-left: 50px;
->>>>>>> Stashed changes
 }
 .thongtin1 h3{
 padding-top: 10px;
@@ -473,12 +461,10 @@ grid-template-columns: 1fr 1fr 1fr;
 grid-gap: 20px;
 height: 30px;
 }
-<<<<<<< Updated upstream
 .box-all {
   display: none;
 
 }
-<<<<<<< HEAD
 .menu2-1{
   display: none;
   position:fixed;
@@ -496,111 +482,8 @@ height: 30px;
   color: #111111;
   padding-left: 500px;
  }
-=======
-
-/* cartegory */
-.row{
-  display: flex;
-  flex-wrap: wrap;
-  text-align: left;
-}
-.cartegory{
-  padding: 100px 0 0;
-}
-.cartegory-top{
-  margin-bottom: 50px;
-  width: 20%;
-}
-.cartegory-top p{
-  font-family: var(--main-text-font) ;
-  margin: 0 12px;
-  font-size: 12px;
-}
-.cartegory-left{
-  width: 20%;
-}
-.cartegory-right{
-  width: 80%;
-}
-.cartegory-right-top-item:first-child{
-  flex: 2;
-  font-size: 16px;
-  font-family: var(--main-text-font);
-  font-weight: bold;
-}
-.cartegory-right-top-item{
-  flex: 1;
-  padding: 0 12px; 
-}
-.cartegory-right-top-item button{
-  width: 100%;
-  padding:10px 15px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  border: 1px solid#dddddd;
-  cursor: pointer;
-}
-.cartegory-right-top-item select{
-  width: 100%;
-  padding:10px 15px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  border: 1px solid#dddddd;
-  cursor: pointer;
-}
-.cartegory-right-content {
-  margin-top: 20px;
-  justify-content: space-between;
-}
-.cartegory-right-content-item {
-  width: calc(25% - 12px);
-  text-align: center;
-  padding: 12px 0;
-}
-.cartegory-right-content-item h1 {
-  font-size: 11px;
-  font-family: var(--main-text-font);
-  margin-top: 6px;
-  color: #333333;
-}
-.cartegory-right-content-item img{
-  width: 100%;
-}
-.cartegory-right-content-item p{
-  font-size: 12px;
-}
-.cartegory-right-bottom{
-  justify-content: space-between;
-  margin: 30px 0 20px;
-  width: 100%;
-}
-.cartegory-right-bottom p{
-  font-family: var(--main-text-font);
-  font-size: 11px;
-  
-}
-.cartegory-left ul li{
-  padding: 12px 0;
-}
-.cartegory-left ul li>a{
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: var(--main-text-font);
-}
-.cartegory-left ul li ul li{
-  padding-left: 10px;
-}
-.cartegory-left-li ul{
-  display: block;
-}
->>>>>>> c03400496ce6ec91ae067c13852a9dc9fbbe4b50
-=======
 @media (max-width: 767px) {
 nav.box-2{
   display: none;
 }
 }
->>>>>>> Stashed changes

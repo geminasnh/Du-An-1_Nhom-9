@@ -7,8 +7,11 @@
         background-color: #F5F5F2;
         display: none;
       }
-
-      nav{
+     .logo1{
+      width: 40px;
+      margin-top: 10px;
+     }
+      .auto92{
         width: 92%;
         display: grid;
         grid-template-columns: 1fr 1fr ;
@@ -34,47 +37,57 @@
        
        
       }
+    
     .iconhiden{
         display: block;
 
     }
+    
     .iconhiden{
         border-radius: 100%;
-        padding-left: 10px;
+        
         
         }
-        .iconhiden i{
-        
+    .pd10{
+      padding-left: 10px;
+    }
+    .iconhiden i{  
         color: #111111;
         width: 30px;
         line-height: 30px;
         font-size: 24px;
-        }
-        .iconhiden i:hover{
-        background: black;
+    }
+    .iconhiden i:hover{
+        background: rgb(224, 221, 221);
         border-radius: 100%;
-        color: white;
-        }
+       
+    }
     .box-2-1{
-        display: block;
-        width: 40px;
-        height: 25px;
-    
+      display: block;
+      width: 30px;
+      height: 30px;
+      
+  
     }
-    .search_bar form input {
-        width: 80px;
-    }
-    .box-2-1 img{
-        padding-left: 1px;
-        object-fit: cover;
-        width: 40px;
-        height: 25px;
-    
-    }
+    .bagach{
+      width: 20px;
+      height: 2px;
+      background-color: black;
+      margin: 4px 0;
+     }
+   
     .box-2-1 button{
+       
        background-color: white;
        border: none;
+       border-radius: 100%;
+       width: 30px;
+       height: 30px;
     }
+    .box-2-1 >button:hover {
+      background-color: rgb(224, 221, 221);
+      
+   }
     .thongtin{
         width: 92%;
         justify-content: center;
@@ -86,23 +99,30 @@
             text-align: center;
 
             }
-        .khung{
+      .khung{
             background-color: #fff;
-            width: 60%;
+            width: 62%;
             margin-right: 0px;
             height: 100%;
         }
-        .khung button{
+      .khung button{
            border: none;
            background-color: #fff;
            border-radius: 100%;
            width: 30px;
-           line-height: 30px;
+           height: 30px;
+           
            color: black;
            font-size: 24px;
         }
         .close{
             margin-right: 20px;
+        }
+        .khung i{
+          color: #111111;
+          width: 30px;
+          line-height: 30px;
+          font-size: 20px;
         }
         .khung button:hover{
             
@@ -136,10 +156,11 @@
           }
          
           .box-2-1-2 ul{       
-           height: 120px;
+           height: 200px;
+           
           }
           .box-2-1-2 ul li{
-            border-bottom: 1px solid black;
+          
             display: grid;
             grid-template-columns: 1fr 1fr;
             list-style: none;
@@ -151,7 +172,7 @@
           .box-2-1-2 ul li a{
             margin-left: 0px;
             width: 80%;
-            font-size: 20px;
+            font-size: 24px;
             color: black;
             text-decoration: none;
           }
