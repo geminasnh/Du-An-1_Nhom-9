@@ -22,6 +22,9 @@
         display: none;
         
       }
+      nav{
+        top: 0;
+      }
       nav .logo2{
         width: 200px;
         height: 60px;
@@ -176,5 +179,21 @@
             color: black;
             text-decoration: none;
           }
+          .chuy{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+          }
+          .btn_danhmuc{
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 130px;
+            height: 40px;
+            border-radius: 40px;
+            font-size: 16px;
+            margin-top: -70px;
+            margin-left: 20px;
+           }
          
 }
