@@ -23,12 +23,12 @@
          </div>
          <div style="height:50%;">
         <ul >
-         <li><a href="#">Trang chủ  </a><button id="btn3"><i class="bi bi-chevron-right"></i></button></li>
-         <li><a href="sanpham.html">Sản phẩm   </a><button id="btn4"><i class="bi bi-chevron-right"></i></button></li>
+         <li><a href="">Trang chủ  </a><button id="btn3"><i class="bi bi-chevron-right"></i></button></li>
+         <li><a href="">Sản phẩm</a><button id="btn4"><i class="bi bi-chevron-right"></i></button></li>
          <li><a href="#">Nam        </a><button id="btn5"><i class="bi bi-chevron-right"></i></button></li>
          <li><a href="#">Nữ         </a><button id="btn6"><i class="bi bi-chevron-right"></i></button></li>
          <li><a href="#">Sale       </a><button id="btn7"><i class="bi bi-chevron-right"></i></button></li>
-         <li><a href="#">Tin tức    </a><button id="btn8"><i class="bi bi-chevron-right"></i></button></li>
+         <li><a href="">Tin tức    </a><button id="btn8"><i class="bi bi-chevron-right"></i></button></li>
          </ul>
         </div>
         <div>
