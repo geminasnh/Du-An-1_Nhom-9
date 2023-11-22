@@ -14,7 +14,7 @@ switch ($act){
   case 'san-pham':{
     require_once("view/sanpham.php");
     break;
-    }
+    } 
   case 'tin-tuc':{
     require_once("view/tintuc.php");
     break;
