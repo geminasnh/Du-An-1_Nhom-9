@@ -9,6 +9,7 @@ if(isset($_GET['act'])){
 switch ($act){
   case 'danh-sach':{
   require_once("view/index.php");
+  
   break;
   }
   case 'san-pham':{
