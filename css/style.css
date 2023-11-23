@@ -111,3 +111,13 @@ font-size: 20px;
 .lo2 p a:hover{
   text-decoration: underline;
 }
+.lo3 input:hover{
+background-color: #fff;
+}
+.thongbao{
+  color: red;
+}
+.lo1 li a {
+  text-decoration: none;
+list-style: none;
+}

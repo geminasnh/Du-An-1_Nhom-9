@@ -18,24 +18,37 @@
 </head>
 <body>
     <div class="login">
-    <form action="index.php?act=dangki" method="POST">
-      <h5>ĐĂNG KÍ</h5>
+    <form action="index.php?act=edit_tk" method="POST">
+      <h5>Cập Nhật Tài Khoản</h5>
+      <?php 
+          if(isset($_SESSION['user'])&&(is_array($_SESSION['user']))){
+             extract($_SESSION['user']);
+          }      
+      ?>
       <div class="lo1">
-        <input type="text" name="email" placeholder="Email" required>
+        <input type="text" name="email" placeholder="Email" required value = "<?=$email?>">
         <i class='bx bxs-user'></i>
       </div>
       <div class="lo1">
-        <input type="text" name="user" placeholder="Tên đăng nhập" required>
+        <input type="text" name="user" placeholder="Tên đăng nhập" required value = "<?=$user?>">
         <i class='bx bxs-user'></i>
       </div>
       <div class="lo1">
-        <input type="password" name="pass" placeholder="Mật khẩu" required>
+        <input type="password" name="pass" placeholder="Mật khẩu" required value = "<?=$pass?>">
         <i class='bx bxs-lock-alt' ></i>
       </div>
    
-
+      <div class="lo1">
+        <input type="text" name="address" placeholder="Địa chỉ" required value = "<?=$address?>">
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="lo1">
+        <input type="text" name="tel" placeholder="Điện thoại" required value = "<?=$tel?>"> 
+        <i class='bx bxs-user'></i>
+      </div>
     <div class="lo3">
-      <input type="submit" value="Đăng kí" name="dangky">
+      <input type="hidden" name="idtk" value="<?=$idtk?>">
+      <input type="submit" value="Cập nhật" name="capnhat">
       </div>
       <div class="lo2">
         <p>Bạn đã có tài khoản? <a href="index.php?act=dangnhap">Đăng nhập</a></p>
