@@ -50,6 +50,19 @@ switch ($act){
         }
         include ("login/edit_tk.php");
         break;
+        case 'quenmk':
+          if(isset($_POST['guiemail'])&&($_POST['guiemail'])){
+            $email = $_POST['email'];
+            $check_email=check_email($email);
+         if(is_array($check_email)){
+$thongbao = "Mật khẩu của bạn là: ".$check_email['pass'];
+         }else{
+          $thongbao = "Email này không tồn tại";
+         }
+             
+          }
+          include ("login/quenmk.php");
+          break;
     default:
     include ("home.php");
     break;
