@@ -12,4 +12,9 @@ function update_taikhoan($idtk,$email, $user, $pass,$tel,$address){
   $sql = "UPDATE taikhoan SET email='".$email."', user='".$user."',pass='".$pass."',tel='".$tel."', address='".$address."' where idtk=".$idtk;
   pdo_execute($sql);
 }
+function check_email($email){
+  $sql = "SELECT * FROM taikhoan WHERE email='".$email."'";
+  $sp = pdo_query_one($sql);
+  return $sp;
+  }
 ?>

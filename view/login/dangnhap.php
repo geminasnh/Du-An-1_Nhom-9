@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <title>Document</title> <link rel="stylesheet" href="../css/style.css">
+  <title>Document</title> <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!DOCTYPE html>
@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -33,8 +33,9 @@
        
       <li><a href="index.php?act=quenmk">Quên mật khẩu</a></li>
       <li><a href="index.php?act=edit_tk">Cập nhật tài khoản</a></li>
+      
       <li><a href="">Đăng nhập admin</a></li>
-      <li><a href="index.php?act=thoat">Thoát</a></li>
+      <li><a href="index.php?act=thoat">Thoát</a></li>  
       </div>
 
 <?php

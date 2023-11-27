@@ -15,7 +15,7 @@
       <header>
         <div class="logo-menu1" >
          <div class="logo1">
-            <a href="index.html"><img src="../images/logo1.jpg" alt=""></a> 
+            <a href="index.html"><img src="images/logo1.jpg" alt=""></a> 
          </div>
         
          <div class="menu1">
@@ -54,7 +54,7 @@
                 </div>
         </div>
          <div class="logo1">
-            <a href=""><img src="../images/logo1.jpg" alt=""></a> 
+            <a href=""><img src="images/logo1.jpg" alt=""></a> 
          </div>
         </div>
         <div class="khung" id="show2">
@@ -72,7 +72,7 @@
 <nav>
   <div class="auto92">
     <div class="logo2">
-    <a href="index.html"><img src="../images/logo2.jpg" alt=""></a>
+    <a href="index.html"><img src="images/logo2.jpg" alt=""></a>
     </div>
     
     <div class="box-2">
