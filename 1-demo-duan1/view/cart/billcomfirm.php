@@ -50,15 +50,7 @@ if(isset($bill)&&(is_array($bill))){
     .boxcontent:hover {
         background-color: #e0e0e0;
     }
-        form {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+    
 
         table {
             width: 100%;
