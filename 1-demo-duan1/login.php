@@ -26,7 +26,23 @@ include "model/taikhoan.php";
         session_unset();
         header('location:index.php');
             break;
-        
+        case 'resetpass':
+                if (isset($_POST['dangky'])&&($_POST['dangky'])) {
+                    $email =$_POST['email'];
+                    $checkemail=checkemail($email);
+                    if (is_array($checkemail)) {
+                        $email =$_POST['email'];
+                       $pass=substr(md5(rand(0,999999) ), 0, 8);        
+                       update_pass($pass,$email);  
+                       guimail($email,$pass);
+                       $thongbao="gửi thành công vui long check email";   
+                    }else {
+                        $thongbao="khong ton tai email trong he thong";
+                    }
+                    header('location:resetpass.php');
+                }
+                header('location:resetpass.php');
+                 break;
         default:
         header('location:index.php');
             break;
@@ -42,6 +58,7 @@ include "model/taikhoan.php";
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
+<body>
 <div class="body">
     
 <div class="logologin">
@@ -59,7 +76,7 @@ include "model/taikhoan.php";
     </div>
     <div class="remember">
         <label><input type="checkbox">Remember me  </label>
-        <a href="#">Forgot Password</a>
+        <a href="login.php?lg=resetpass">Forgot Password</a>
       </div>
     <div class="inputSubmit" >
     <input type="submit" value="login" name="dangnhap">

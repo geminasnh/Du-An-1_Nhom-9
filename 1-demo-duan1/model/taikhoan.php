@@ -42,9 +42,9 @@ function update_taikhoanadmin($id,$user,$pass,$email,$address,$tel,$role){
     $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."',role='".$role."' where id=".$id;
     pdo_execute($sql);
 }
-function update_taikhoan($id,$user,$pass,$email,$address,$tel,){
+function update_taikhoan($id,$user,$pass,$email,$address,$tel,$birthday){
    
-    $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."' where id=".$id;
+    $sql="update taikhoan set user='".$user."', pass='".$pass."', email='".$email."', address='".$address."', tel='".$tel."', birthday='".$birthday."' where id=".$id;
     pdo_execute($sql);
 }
 function guimail($email,$pass){
@@ -62,7 +62,7 @@ function guimail($email,$pass){
         $mail->Password = 'gpca zjqj lsou mepd';   // SMTP password
         $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
         $mail->Port = 465;  // port to connect to                
-        $mail->setFrom('ngod5712@gmail.com', 'ocemobile' ); 
+        $mail->setFrom('ngod5712@gmail.com', 'Monkey Sport' ); 
         $mail->addAddress($email, 'you'); 
         $mail->isHTML(true);  // Set email format to HTML
         $mail->Subject = 'send password new';

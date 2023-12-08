@@ -1,29 +1,104 @@
-<?php
-function viewcart1(){
+ <?php
+
+function viewcart1()
+{
     global $img_path;
-    $tong=0;
-    $i=0;
+
+    // Check if the form is submitted
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Check if quantity is set in the POST data
+        if (isset($_POST['quantity'])) {
+            // Update the session data with the new quantities
+            foreach ($_POST['quantity'] as $key => $newQuantity) {
+                $_SESSION['mycart'][$key][4] = $newQuantity;
+            }
+        }
+    }
+
+    $tong = 0;
+    $i = 0;
+
+    echo '<div id="cart-container">'; // Add a container for the cart items
+
     foreach ($_SESSION['mycart'] as $cart) {
-    $hinh=$img_path.$cart[2];
-    $ttien=$cart[3]*$cart[4];
-    $tong+=$ttien;
-    $xoasp='<a href="index.php?act=delcart&idcart='.$i.'"><i class="bi bi-trash"></i></a>';
-    echo '<tr>
-    <td><img src="'.$hinh.'" alt="" height="80px"></td>
-    <td>'.$cart[1].'</td>
-    <td>'.$cart[3].'</td>
-    <td>'.$cart[4].'</td>
-    <td>'.$ttien.   '</td>
-    <td>'.$xoasp.   '</td>
-    </tr>';
-    $i+=1;
+        $hinh = $img_path . $cart[2];
+        $ttien = $cart[3] * $cart[4];
+        $tong += $ttien;
+        $xoasp = '<a href="index.php?act=delcart&idcart='.$i.'"><i class="bi bi-trash"></i></a>';
+
+        // Sử dụng number_format để thêm dấu phẩy cho giá tiền và $cart[4]
+        $formatted_ttien = number_format($ttien) . ' VND';
+        $formatted_quantity = number_format($cart[4]);
+
+        echo '
+        <div class="bag1">
+            <img src="'.$hinh.'" alt="">
+            <div class="name_">
+                <a href="">'.$cart[1].'</a>
+                <p>Older Kids Shoes</p>
+                <p>'.$cart[7].'</p>
+                <form method="post" action="">
+                    <p> size '.$cart[6].' Quality <input type="number" class="quantity-input" name="quantity[]" value="'.$cart[4].'" min="1" max="10"></p>
+                    </p>
+                    <input type="hidden" name="product_id" value="'.$cart[0].'">
+                </form>
+                <span class="heart_trash">
+                    <i class="bx bx-heart"></i>
+                    '.$xoasp.'
+                </span>
+            </div>
+            <div class="price_">'.$formatted_ttien.'</div>
+            <hr>
+        </div>';
+        $i += 1;
+    }
+
+    echo '</div>'; // Close the cart container
+
+    // Add JavaScript for auto-updating
+    echo '
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var quantityInputs = document.querySelectorAll(".quantity-input");
+
+            quantityInputs.forEach(function(input) {
+                input.addEventListener("change", function() {
+                    // Trigger the form submission when the quantity changes
+                    input.closest("form").submit();
+                });
+            });
+        });
+    </script>
+    </div>
+    </div>
+        <div class="sidebar">
+            <form action="">
+            <h4>Summary</h4>
+            <div class="total">
+            <div class="total_left">
+                <span>Subtotal  <i class="bi bi-question-circle-fill"></i></span>
+                
+                <p>Estimated Delivery & Handling</p>
+    
+            </div>
+            <div class="total_right">
+                <span>'.number_format($tong).' VND</span>
+                
+                <p>Free</p>
+            </div>
+            </div>
+            <div class="total boder">
+                <div class="total_left">
+                   
+                    <p>Total</p>
+    
+                </div>
+                <div class="total_right">
+                    <span>'.number_format($tong).' VND</span>
+                </div>
+            </div>';
 }
-echo '<tr>
-<td colspan="4">Tổng đơn hàng</td>
-<td>'.$tong.'</td>
-<td></td>
-</tr>';
-}
+
 function viewcart2(){
     global $img_path;
     $tong=0;
@@ -36,6 +111,8 @@ function viewcart2(){
     <td>'.$cart[1].'</td>
     <td>'.$cart[3].'</td>
     <td>'.$cart[4].'</td>
+    <td>'.$cart[6].'</td>
+    <td>'.$cart[7].'</td>
     <td>'.$ttien.   '</td>
     </tr>';
     
@@ -87,10 +164,14 @@ function insert_cart($iduser, $idpro, $img, $name, $price, $soluong,$thanhtien,$
     $sql="insert into cart(iduser, idpro, img, name, price, soluong,thanhtien,idbill) values('$iduser', '$idpro', '$img', '$name', '$price', '$soluong','$thanhtien','$idbill')";
     return pdo_execute($sql);
     }
-     function loadone_bill($id){
+    function loadone_bill($id){
         $sql="select * from bill where id=".$id;
-        $bill=pdo_query_one($sql);
-        return $bill;
+        $bl=pdo_query_one($sql);
+        return $bl;
+    }
+    function  update_bill($id,$bill_status){
+        $sql="update bill set bill_status='".$bill_status."' where id=".$id;
+        pdo_execute($sql);
     }
     function loadall_cart($idbill){
         $sql="select * from cart where idbill=".$idbill;
@@ -117,16 +198,22 @@ function insert_cart($iduser, $idpro, $img, $name, $price, $soluong,$thanhtien,$
     function get_ttdh($n) {
         switch ($n) {
         case '0':
-        $tt="Đơn hàng mới";
+        $tt="Chờ xác nhận";
         break;
         case '1':
         $tt="Đang xử lý";
         break;
         case '2':
-        $tt="Đang giao hàng";
+        $tt="Đang vận chuyển";
         break;
         case '3':
-        $tt="Hoàn tất";
+        $tt="Đã giao hàng";
+        break;
+        case '4':
+        $tt="Đã nhận hàng";
+        break;
+        case '5':
+        $tt="Hủy đơn";
         break;
         default:
         $tt="Đơn hàng mới" ;

@@ -50,7 +50,15 @@ if(isset($bill)&&(is_array($bill))){
     .boxcontent:hover {
         background-color: #e0e0e0;
     }
-    
+        .form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
         table {
             width: 100%;
@@ -107,7 +115,7 @@ if(isset($bill)&&(is_array($bill))){
                 <td><?=$bill['bill_email'];?></td>
             </tr>
             <tr>
-                <td><label for="phone">Số Điện Thoại:</label></td>
+            <td><label for="phone">Số Điện Thoại:</label></td>
                 <td><?=$bill['bill_tel'];?></td>
             </tr>
         </table>

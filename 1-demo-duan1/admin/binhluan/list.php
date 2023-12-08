@@ -25,7 +25,7 @@
                     <tr>
                     <td><input type="checkbox" name="" idbl=""></td>
                     <td>'.$idbl.'</td>
-                    <td>'.$noidung.'</td>
+                    <td>'.$noidung.'</td><br>
                     <td> #:'.$iduser.' name:'.$user.'</td>
                     <td> #:'.$idpro.' name:'.$name.'</td>
                     <td>'.$ngaybinhluan.'</td>

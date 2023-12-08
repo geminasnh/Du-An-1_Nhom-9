@@ -1,1 +1,4 @@
-<h1>control panel</h1>
+
+<div class="home">
+
+</div>

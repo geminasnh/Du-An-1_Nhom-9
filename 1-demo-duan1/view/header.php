@@ -11,47 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-      <div class="box-all">
-      <div class="box-2-1-2" id="show">
-        <div class="khung" id="show1">
-          <div class="close">
-          <button id="btn2">
-            <i class="bi bi-x-lg"></i>
-        </button>
-         </div>
-         <div style="height:50%;">
-        <ul >
-         <li><a href="index.php">Trang chủ  </a><button id="btn3"><i class="bi bi-chevron-right"></i></button></li>
-         <li><a href="index.php?act=product">Sản phẩm   </a><button id="btn4"><i class="bi bi-chevron-right"></i></button></li>
-         <li><a href="#">Nam        </a><button id="btn5"><i class="bi bi-chevron-right"></i></button></li>
-         <li><a href="#">Nữ         </a><button id="btn6"><i class="bi bi-chevron-right"></i></button></li>
-         <li><a href="#">Sale       </a><button id="btn7"><i class="bi bi-chevron-right"></i></button></li>
-         <li><a href="#">Tin tức    </a><button id="btn8"><i class="bi bi-chevron-right"></i></button></li>
-         </ul>
-        </div>
-        <div>
-            <p>Become a Nike Member for the best products, inspiration and stories in sport. <a href="">Learn more</a></p>
-            <div class="nextt">
-                <button class="button1">Shop</button>
-                <button class="button1">Explore</button>
-                </div>
-        </div>
-         <div class="logo1">
-            <a href=""><img src="images/logo1.jpg" alt=""></a> 
-         </div>
-        </div>
-        <div class="khung" id="show2">
-          <div class="close">
-          <button id="btn2-1"><i class="bi bi-chevron-left"></i></button>
-         </div>
-        <ul >
-         <li><a href="#">home 1  </a></li>
-         <li><a href="#">home 2   </a></li>
-         </ul>
-        </div>
-      </div>
-      </div>
+<div class="container">
 <header>
    <div class="logo-menu1" >
     <div class="logo1">
@@ -118,6 +78,9 @@
         <ul class="menu_index">
             <li class="menu_item">
             <a href="index.php" class="menu_link">Trang chủ</a>
+           
+            </li>
+            <li class="menu_item"><a class="menu_link" href="index.php?act=sanpham" >Sản phẩm </a>
             <div class="menu_child">
             <div class="menu_child2">
 
@@ -183,8 +146,8 @@
                  </div>
    
             </div>
+          
             </li>
-            <li class="menu_item"><a class="menu_link" href="index.php?act=product" >Sản phẩm </a></li>
             <li class="menu_item"><a class="menu_link" href="#">Nam</a></li>
             <li class="menu_item"><a class="menu_link" href="#">Nữ</a></li>
             <li class="menu_item"><a class="menu_link" href="#">Sale</a></li>

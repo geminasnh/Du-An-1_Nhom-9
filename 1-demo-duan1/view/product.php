@@ -1,4 +1,4 @@
-<div class="mainallsanpham">
+<!-- <div class="mainallsanpham">
 <main id="navbar">
   <summary>
   <div class="header-main">
@@ -96,7 +96,7 @@
   </div>
   </div>
    <div class="box-all-sp">
-    <!-- <div class="box-sp">
+     <div class="box-sp">
       <img src="images/disuwww5uxkqulu2aivh.webp" alt="">
       <div class="name-box-sp">
         <p>Giày nam</p>
@@ -175,3 +175,4 @@
 
 </main>
 </div>
+ -->

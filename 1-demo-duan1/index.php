@@ -39,7 +39,15 @@ case 'sanpham':
                 $view= update_view($id);
                 $onesp=loadone_sanpham($id);
                 extract($onesp);
-                $spcl=load_sanpham_cungloai($id,$iddm);
+                $onebt=loadone_sanpham_bienthe($id);
+                $size_sp_id=loadone_sp_size_id($id);
+                $spcl=load_sanpham_cungloai($id,$iddm);  
+            if(isset($_GET['iddm'])&&($_GET['iddm']>0)){
+                    $iddm=$_GET['iddm'];
+                    $one_dm_sp=loadone_danhmuc_sanpham($iddm);
+                    extract($one_dm_sp);
+                   }
+               
                 include "view/sanphamct.php";
             }else{
                 include "view/home.php";
@@ -53,13 +61,16 @@ case 'sanpham':
                    $price=$_POST['price'];
                    $soluong=1;
                    $ttien=$soluong*$price;
-                   $spadd=[$id,$name,$img,$price,$soluong,$ttien];
+                   $size=$_POST['size'];
+                   $bienth=$_POST['bienthe'];
+                   $spadd=[$id,$name,$img,$price,$soluong,$ttien,$size,$bienth];
                    array_push($_SESSION['mycart'],$spadd);
+                   include "view/cart/viewcart.php";
+
                
             }
-            include "view/cart/viewcart.php";
                 break;
-                case 'delcart':
+            case 'delcart':
                     if(isset($_GET['idcart'])){
                   
                     array_splice($_SESSION['mycart'],$_GET['idcart'],1);
@@ -68,10 +79,11 @@ case 'sanpham':
                     }
                  include "view/cart/viewcart.php";
                     
-                    break;
+                break;
                     case 'viewcart':
                      include "view/cart/viewcart.php";
                         break;
+                       /*  bill */
                         case 'bill':
                           /*   if (isset($_SESSION['user'])) {
                                 include "view/cart/bill.php";
@@ -113,7 +125,12 @@ case 'sanpham':
                             }
                             
                             }
-                               
+                            if(isset($_GET['idcart'])){
+                  
+                                array_splice($_SESSION['mycart'],$_GET['idcart'],1);
+                                }else{
+                                $_SESSION['mycart']=[];
+                                }   
                             $bill=loadone_bill($idbill);
                             $billct=loadall_cart($idbill);
                                 include "view/cart/billcomfirm.php"; 
@@ -123,23 +140,33 @@ case 'sanpham':
         $listbill=loadall_bill($_SESSION['user']['id']);
         include "view/cart/mybill.php";
         break;
-               
+        case 'updatebill':
+            if(isset($_POST['capnhat'])&&($_POST['capnhat'])){
+                $bill_status=$_POST['bill_status'];
+                $id=$_POST['id'];
+                update_bill($id,$bill_status);
+                $thongbao="cap thanh cong";
+            }
+            $listbill=loadall_bill($_SESSION['user']['id']);                    
+            include "view/cart/mybill.php";
+            break;      
         
         case 'account':
             if (isset($_POST['capnhat'])&&($_POST['capnhat'])) {
                 $user =$_POST['user'];
                 $pass =$_POST['pass'];
                 $email =$_POST['email'];
+                $birthday = date('Y-m-d', strtotime($_POST['birthday']));
                 $address =$_POST['address'];
                 $tel =$_POST['tel'];
                 $id =$_POST['id'];
-                update_taikhoan($id,$user,$pass,$email,$address,$tel);
+                update_taikhoan($id,$user,$pass,$email,$address,$tel,$birthday);
                 $_SESSION['user']=checkuser($user,$pass);
             } 
             include "view/account.php";
             break;
-        case 'product':
-            include "view/product.php";
+        case 'sanpham':
+            include "view/sanpham.php";
             break;
         case 'gopy':
             include "view/gopy.php";

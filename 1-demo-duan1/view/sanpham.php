@@ -8,7 +8,7 @@
     </div>
     <div class="new-sp-loc">
         <ul>
-          <li>
+         <!--  <li>
             <div id="btn_loc">
             Lọc
             <i class="bi bi-sliders"></i>
@@ -18,7 +18,7 @@
             <i class="bi bi-sliders"></i>
            </div>
 
-          </li>
+          </li> -->
         </ul>
        <ul class="ulsx">
        
@@ -45,9 +45,9 @@
       </div>
     </div>
   </summary>
-  <div id="main-loc-loc">
-<div id="main-loc">
-  <div id="loc" >
+  <!-- <div id="main-loc-loc">
+<div id="main-loc"> -->
+  <!-- <div id="loc" >
   <div class="list_loc">
       <p><a class="menu_link_black" href="#" >Sản phẩm </a></p>
       <p><a class="menu_link_black" href="#" >Sản phẩm </a></p>
@@ -95,27 +95,42 @@
 
     
   </div>
-  </div>
+  </div> -->
+  
    <div class="box-all-sp">
 
-         <?php
-        
-        foreach ($dssp as $spc) {
-            extract($spc);
-            $linksp="index.php?act=sanphamct&idsp=".$id;
-            $hinh=$img_path.$img;
-            echo'<div class="box-sp">
-            <a href="'.$linksp.'" ><img src="'.$hinh.'" alt="""></a>
+   <?php
+foreach ($dssp as $spc) {
+    extract($spc);
+    $linksp = "index.php?act=sanphamct&idsp=" . $id;
+    $hinh = $img_path . $img;
+
+    // Sử dụng number_format để thêm dấu phẩy cho giá tiền
+    $formatted_price = number_format($price) . '₫';
+    
+    // Chỉ hiển thị giá cũ khi nó lớn hơn 0
+    $formatted_priceold = ($priceold > 0) ? number_format($priceold) . '₫' : '';
+
+    echo '<div class="box-sp">
+            <a href="' . $linksp . '" style="text-decoration: none; color: black;"><img src="' . $hinh . '" alt=""></a>
             <div class="name-box-sp">
-            <p><a href="'.$linksp.'" >'.$name.'</a></p>
-            <div class="price">
-            <p>'.$price.'₫<del>999.000đ</del></p>
+                <p><a href="' . $linksp . '" style="text-decoration: none; color: black;">' . $name . '</a></p>
+                <div class="price">
+                    <p>' . $formatted_price;
+                    
+    if ($priceold > 0) {
+        echo '<del>' . $formatted_priceold . '</del>';
+    }
+    
+    echo '</p>
+                </div>
             </div>
-          </div>
-        </div>';
-          
-        }
-        ?>
+          </div>';
+}
+?>
+
+
+
    <!--  <div class="box-sp">
       <img src="images/disuwww5uxkqulu2aivh.webp" alt="">
       <div class="name-box-sp">
@@ -162,8 +177,8 @@
         </div>
       </div>
     </div>    -->
-  </div>
-</div>
+ <!--  </div>
+</div> -->
 </div>
 
 </main>

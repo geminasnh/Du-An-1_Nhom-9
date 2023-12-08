@@ -3,7 +3,7 @@
  * Mở kết nối đến CSDL sử dụng PDO
  */
 function pdo_get_connection(){
-    $dburl = "mysql:host=localhost;dbname=duanmau;charset=utf8";
+    $dburl = "mysql:host=localhost;dbname=duan1;charset=utf8";
     $username = 'root';
     $password = '';
 
@@ -31,6 +31,8 @@ function pdo_execute($sql){
         unset($conn);
     }
 }
+
+/**Trả về ID của bản ghi cuối cùng được chèn vào cơ sở dữ liệu   */
 function pdo_execute_return_lastInsertId($sql){
     $sql_args = array_slice(func_get_args(), 1);
     try{

@@ -11,7 +11,7 @@ function delete_danhmuc_cha($iddmcha){
     
 }
 function delete_sanpham_danhmuc_danhmuc_cha($iddmcha){
-    $sql=" delete from danhmuc where iddmcha=".$iddmcha;
+    $sql=" delete from danhmuc where idcha=".$iddmcha;
     pdo_execute($sql);
 }
 function loadall_danhmuc_cha(){
@@ -30,7 +30,7 @@ function update_danhmuc_cha($iddmcha,$tendmcha){
 }
 /* DANH MUC CON
  */function insert_danhmuc($tenloai,$iddmcha){
-    $sql="insert into danhmuc(namedm,iddmcha) values('$tenloai','$iddmcha')";
+    $sql="insert into danhmuc(namedm,idcha) values('$tenloai','$iddmcha')";
     pdo_execute($sql);
 
 }
@@ -40,7 +40,7 @@ function delete_danhmuc($id){
     
 }
 function loadall_danhmuc(){
-    $sql="select * from danhmuc order by id desc";
+    $sql= "select * from danhmuccha left join danhmuc on danhmuccha.iddmcha=danhmuc.idcha order by iddmcha desc";
     $listdanhmuc=pdo_query($sql);
     return $listdanhmuc;
 }
@@ -49,9 +49,18 @@ function loadone_danhmuc($id){
     $dm=pdo_query_one($sql);
     return $dm;
 }
+function loadone_danhmuc_sanpham($iddm){
+    $sql="select * from danhmuc where id=".$iddm;
+    $dm=pdo_query_one($sql);
+    return $dm;
+}
+function loadone_danhmuc_danhmuccha($iddmcha){
+    $sql="select * from danhmuc where idcha=".$iddmcha;
+    $listdmc=pdo_query_one($sql);
+    return$listdmc;
+}
 function update_danhmuc($id,$tenloai){
     $sql="update danhmuc set namedm='".$tenloai."' where id=".$id;
     pdo_execute($sql);
 }
-
 ?>

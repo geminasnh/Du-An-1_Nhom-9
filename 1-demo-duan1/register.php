@@ -20,6 +20,7 @@ include "model/taikhoan.php";
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
+<body>
 <div class="body">
     
     <div class="logologin">

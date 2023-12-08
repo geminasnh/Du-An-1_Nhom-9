@@ -31,15 +31,18 @@ if(is_array($tk)) {
           </div>
           <div class="row mb10" >
             VAI TRO
-            <input type="text" name="role" value="<?=$role ?>">
+            <tr>
+            <td><input type="radio" name="role" value="0" checked>CUSTUM</td>
+            <td><input type="radio" name="role" value="1" > ADMIN</td>
+          </tr>
           </div>
           
-        <div class="row mb10">
+        <div class="row mb10 fl">
         <input type="hidden" name="id" value="<?php if (isset($id)&&($id >0)) {echo $id;}?>">
         <input type="submit" value="CAP NHAT" name="capnhat">
         <input type="reset" value="NHAP LAI">
-        <a href="index.php?act=dskh"><input type="button" value="DANH SACH"></a>
         </div>
+        <a href="index.php?act=dskh"><input type="button" value="DANH SACH"></a>
         
         <?php
         if (isset($thongbao)&&($thongbao!="")) {

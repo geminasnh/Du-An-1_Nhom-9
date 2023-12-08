@@ -31,19 +31,23 @@ if(is_file($hinhpath)) {
 ?>
          <div class="row mb10">
         TÊN SẢN PHẨM <br>
-        <input type="text" name="tensp" value="<?=$name?>">
+        <input type="text" name="tensp" value="<?=$name?>"  required="required">
         </div>
         <div class="row mb10">
         GIÁ SẢN PHẨM<br>
-        <input type="text" name="giasp" value="<?=$price?>">
+        <input type="number" name="giasp" value="<?=$price?>" required="required">
+        </div>
+        <div class="row mb10">
+        GIÁ CŨ SẢN PHẨM<br>
+        <input type="number" name="giacu" value="<?=$priceold?>" required="required">
         </div>
         <div class="row mb10">
         MÔ TẢ SẢN PHẨM<br>
-        <textarea name="mota"cols="30" rows="10"><?=$mota?></textarea>
+        <textarea name="mota"cols="30" rows="10"  required="required"><?=$mota?></textarea>
         </div>
         <div class="row mb10">
         ẢNH SẢN PHẨM<br>
-        <input type="file" name="hinh">
+        <input type="file" name="hinh"  >
         <?=$hinh?>
         </div>
         <input type="hidden" name="id" value="<?=$id?>">
